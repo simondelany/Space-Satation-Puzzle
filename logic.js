@@ -70,7 +70,7 @@ function makeMove(suitLocation, peices) {
     }
 
     console.dir(peices[0].inhabitants)
-    peices.movePeople(suitLocation, going) // time taken
+    peices.movePeople(suitLocation, going)
     return Math.max(...going) // time taken
 }
 
