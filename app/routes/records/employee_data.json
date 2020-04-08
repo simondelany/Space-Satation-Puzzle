@@ -1,0 +1,106 @@
+{
+    "employees": [
+        {
+            "uuid": "d00f2fef-75e3-44a2-bdde-87acf04e6331",
+            "first-name": "-neil",
+            "last-name": "Fitzpatrick",
+            "title": "Mr.",
+            "postition": {
+                "title": "Pilot"
+            }
+        },
+        {
+            "uuid": "f7cd16aa-9866-4efe-ac70-b20c49167239",
+            "first-name": "Michael",
+            "last-name": "Lawson",
+            "title": "Mr.",
+            "postition": {
+                "title": "Commander"
+            }
+        },
+        {
+            "uuid": "64fa5ade-dd9c-4f8f-b6f6-6755817a9871",
+            "first-name": "Valentina",
+            "last-name": "Mitchel",
+            "title": "Ms.",
+            "postition": {
+                "title": "Mission Specialist"
+            }
+        },
+        {
+            "uuid": "4d43ea7f-03c0-49d6-adc9-0af7385d13d1",
+            "first-name": "Yuri",
+            "last-name": "Karimazov",
+            "title": "Mr",
+            "postition": {
+                "title": "Flight Engineer"
+            }
+        },
+        {
+            "uuid": "51af3c56-f136-4e70-9b8b-9b02c7f95876",
+            "first-name": "Edwin",
+            "last-name": "Marston",
+            "title": "Mr",
+            "postition": {
+                "title": "Payload Specialist"
+            }
+        }
+    ],
+    "physical_assesments": [
+        {
+            "uuid": "12acdaa7-fe56-4f77-a8b7-68acf5c558ae",
+            "employee_uuid": "d00f2fef-75e3-44a2-bdde-87acf04e6331",
+            "status": "ALIVE",
+            "stats": {
+                "spacewalk_1k_speed": 25,
+                "spacesuit_embark": 10,
+                "spacesuit_alight": 10,
+                "airlock_navigation": 15
+            }
+        },
+        {
+            "uuid": "8096297d-3cee-46a0-9939-35084eedd3b9",
+            "employee_uuid": "f7cd16aa-9866-4efe-ac70-b20c49167239",
+            "status": "ALIVE",
+            "stats": {
+                "spacewalk_1k_speed": 85,
+                "spacesuit_embark": 10,
+                "spacesuit_alight": 10,
+                "airlock_navigation": 15
+            }
+        },
+        {
+            "uuid": "306b8d16-f7e1-4991-8a3b-4f8afd6d02fe",
+            "employee_uuid": "64fa5ade-dd9c-4f8f-b6f6-6755817a9871",
+            "status": "ALIVE",
+            "stats": {
+                "spacewalk_1k_speed": 145,
+                "spacesuit_embark": 10,
+                "spacesuit_alight": 10,
+                "airlock_navigation": 15
+            }
+        },
+        {
+            "uuid": "05da4d99-b7d4-424c-af83-79fa14746bb2",
+            "employee_uuid": "4d43ea7f-03c0-49d6-adc9-0af7385d13d1",
+            "status": "ALIVE",
+            "stats": {
+                "spacewalk_1k_speed":265,
+                "spacesuit_embark": 10,
+                "spacesuit_alight": 10,
+                "airlock_navigation": 15
+            }
+        },
+        {
+            "uuid": "0e617c44-1aa3-49ba-973a-48d13f952ca1",
+            "employee_uuid": "51af3c56-f136-4e70-9b8b-9b02c7f95876",
+            "status": "ALIVE",
+            "stats": {
+                "spacewalk_1k_speed": 565,
+                "spacesuit_embark": 10,
+                "spacesuit_alight": 10,
+                "airlock_navigation": 15
+            }
+        }
+    ]
+}
