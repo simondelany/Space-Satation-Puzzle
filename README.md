@@ -34,26 +34,38 @@ The fastest crew members are Neil and Michael and so we expect any plan will lik
 We have 5 crew members
 Each trip we send 2 of the crew to the intact module, leave 1 there and have the other 1 bring us back both suits
 
+```
 1 trip === { 
   crew: [carrier, evacuee?optional], 
   transferRate: 1, 
   transferTime: max(...crew.map(c => c.transferTime)),
 }
+```
 
+```
 *final trip the transfer rate === 2 as no return is required*
+```
 
+```
 total outgoing trips required === crew.length - 1
+```
 
+```
 total return trips required === (total outgoing trips required) - 1
+```
 
-
+```
 outgoingTrips.length === 5 - 1 === 4
 returnTrips.length === 4 - 1 === 3
+```
 
+```
 totalTransfers === 7
+```
 
+```
 Worst case === 7 transfers with the slowest member of the crew (Edwin) present on every transfer === 7 * 10mins === 70mins
-
+```
 The worst case is far too slow which means that we have to think about the order here
 
 *Assumptions:*
@@ -64,12 +76,13 @@ Travel times includes putting on and removal of the space suit in addition to ne
 
 We can use the fastest crew member (Neil) on all 7 transfers and get him to take 1 additional crew member on each outgoing trip
 
+```
 3 x returnTrips ==== [ 1min, 1min, 1min ]; 
 
 sum(...returnTrips) === 3 mins
+```
 
-
-
+```
 4 x outgoingTrips === {
     { evacuee: Michael,   transferTime: 2 min },
     { evacuee: Valentina, transferTime: 3 min },
@@ -78,11 +91,15 @@ sum(...returnTrips) === 3 mins
 }
 
 sum(...outGoingTrips.map(t => t.transferTime)) === 20 mins
+```
 
+```
 totalTransferTime === 23 mins; 
+```
 
+```
 expect(totalTransferTime).toBeLessThanOrEqual(21 mins)  // expected 23 <= 21
-
+```
 We still aren't there
 
 ##### A more efficient approach - Make use of the max(...transferTimes) in outward trips
@@ -101,16 +118,21 @@ The above approach will show a preference to the fastest crew member being the p
 
 *We can then apply the above to generate the following rules:*
 
+```
 *returnTrips* { carrier: min(...safeSection.crew.map(c => c.transferTime)) }
+```
 
-*outwardTrip* :
+```
+*outwardTrips* :
 
 if (we have the second fastest crew memeber already on the safe module) {
   send the 2 slowest crew members // the second fastest crew member will bring back the spacesuit on the return trip
 } else {
   send the fastest crew member back with the next fastest available crew member
 }
+```
 
+```
 Damaged Module         crewTransfers     transferTime
 
 [ 1, 2, 3, 5, 10 ]  -> [ 1, 2 ]           2 min
@@ -123,9 +145,11 @@ Damaged Module         crewTransfers     transferTime
 
 totalTransfers === 7
 totalTransferTime === 21 min
+```
 
-
+```
 expect(totalTransferTime).toBeLessThanOrEqual(21 mins)  // expected 23 <= 21
+```
 
 We've got a plan!
 
