@@ -1,0 +1,72 @@
+// ******************** //
+//        COLORS        //
+// ******************** //
+
+// foreground
+$color-primary: #d8d3b8;
+$color-secondary: #2c3e50;
+$color-accent: #2e8ca5;
+$color-faded: #444340;
+
+// background
+$background-light: #ece7cb;
+$background-dark: #312f2f;
+$background-darker: #565555;
+$background-darkest: #120b19;
+
+// translucent
+$background-overlay: #73737314;
+
+ 
+// ******************** //
+//      LAYOUT          //
+// ******************** //
+
+//defaults
+$section-padding: 3vmin;// 1/1
+$card-padding: 1vmin;   // 1/3
+$card-radius: 1vmin;    // 1/3
+
+$icon-padding: 1em;
+
+
+$text-spacer: 0.4em;
+
+$shadow-size: 0.5vmin;      // 1/4
+$shadow-size-neg: -$shadow-size; // 1/4
+
+// ******************** //
+//         GRID         //
+// ******************** //
+
+$grid-column-count: 4; // default column count
+$grid-spacer: 3vmin;     // 1/1
+ 
+
+
+
+// ******************** //
+//      TYPOGRAPHY      //
+// ******************** //
+$font-family-retro: DejaVu Sans Mono, monospace;
+$font-family-clean: "Trebuchet MS", Helvetica, sans-serif;
+
+%smooth-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+%text-elem-padding {
+    padding: 0.5em $text-spacer 0.3em;
+}
+
+$title-size: 3em;
+$subtitle-size: 2em;
+$font-size: 1.6vh;
+
+
+// ******************** //
+//      SHADOWS         //
+// ******************** //
+$card-shadow: $shadow-size $shadow-size 2px rgba(0, 0, 0, 0.44);
+$cutout-shadow: $shadow-size-neg $shadow-size-neg #151515f2;

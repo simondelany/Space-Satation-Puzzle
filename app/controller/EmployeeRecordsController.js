@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // for speed we will use JSON data instead of connecting to a db
-const data = require('./employee_data.json.js.js.js')
+const data = require('./employee_data.json')
 
 const routes = () => {
     router.route('/employees')

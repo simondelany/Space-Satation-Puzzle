@@ -1,0 +1,19 @@
+body {
+    @extend %smooth-text;
+    font-family: $font-family-retro;
+    font-size: $font-size;
+    text-align: center;
+}
+
+h1, h3, p, span, input, textarea {
+    @extend %text-elem-padding;
+    height: fit-content;
+}
+
+h1 {
+    font-size:  $title-size;
+}
+
+h3 {
+    font-size: $subtitle-size;
+}

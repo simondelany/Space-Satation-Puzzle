@@ -7,7 +7,8 @@
             "title": "Mr.",
             "postition": {
                 "title": "Pilot"
-            }
+            },
+            "transferTime": "1"
         },
         {
             "uuid": "f7cd16aa-9866-4efe-ac70-b20c49167239",
@@ -16,7 +17,8 @@
             "title": "Mr.",
             "postition": {
                 "title": "Commander"
-            }
+            },
+            "transferTime": "2"
         },
         {
             "uuid": "64fa5ade-dd9c-4f8f-b6f6-6755817a9871",
@@ -25,7 +27,8 @@
             "title": "Ms.",
             "postition": {
                 "title": "Mission Specialist"
-            }
+            },
+            "transferTime": "3"
         },
         {
             "uuid": "4d43ea7f-03c0-49d6-adc9-0af7385d13d1",
@@ -34,7 +37,8 @@
             "title": "Mr",
             "postition": {
                 "title": "Flight Engineer"
-            }
+            },
+            "transferTime": "5"
         },
         {
             "uuid": "51af3c56-f136-4e70-9b8b-9b02c7f95876",
@@ -43,7 +47,8 @@
             "title": "Mr",
             "postition": {
                 "title": "Payload Specialist"
-            }
+            },
+            "transferTime": "10"
         }
     ],
     "physical_assesments": [

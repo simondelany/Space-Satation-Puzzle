@@ -1,0 +1,102 @@
+@import "@/styles/definitions/_reset.scss";
+@import "@/styles/definitions/_variables.scss";
+@import "@/styles/definitions/_typography.scss";
+
+body {
+    color: #2c3e50;
+
+    div {
+        padding: $section-padding;
+    }
+
+    span {
+        padding-left: $text-spacer;
+    }
+
+
+    header {
+        height: 15vh;
+
+        div {
+            display: flex;
+
+            img {
+                width: auto;
+            }
+
+            h1{
+                text-align: start;
+            }
+        }
+    }
+
+    main {
+        height: 70vh;
+        background-color: $background-dark;
+        color: $color-primary;
+
+        p {
+            text-align: start;
+        }
+
+        .h-container {
+            display: inline-flex;
+        }
+
+        .h-60 {
+            height: 60vh;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        .console {
+            display: grid;
+            grid-template-rows: 1fr 2em;
+            background-color: $background-darker;
+            border-width: medium;
+            border-color: #616161c4;
+            border-style: inset;
+
+            %console-text-el {
+                font-family: 'Courier New', Courier, monospace;
+                text-indent: $text-spacer;
+                background-color: $background-darkest;
+                color: $color-primary;
+            }
+
+            textarea {
+                @extend %console-text-el;
+                height: 100%;
+            }
+
+            .input-bar {
+                height: 100%;
+                padding: 0;
+
+                input {
+                    @extend %console-text-el;
+                    width: 90%;
+                    float: left;
+                }
+                
+                .submit {
+                    width: 10%;
+                    padding: 0.25em;
+                    background-color: $background-light; 
+                    color: $color-secondary;
+                    border-style: outset;
+                    border-width: 1px;
+                    float: right;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding-top: 6vh;
+        height: 15vh;
+    }
+}
+
