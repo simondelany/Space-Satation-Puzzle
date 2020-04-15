@@ -30,7 +30,7 @@ npm run server
 
 You can then navigate to the vue app from your browser:
 
-[http://localhost:8080/]
+http://localhost:8080/
 
 Enjoy :)
 
