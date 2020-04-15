@@ -1,4 +1,6 @@
 # Space-Station-Puzzle
+*This branch contains an exploration of the idea for my own curiosity*
+_Disclaimer: all additional code in this branch is not submitted as part of the Programming Excersise but is instead included to show where a development of the ideas presented in the original excersise may have led_
 
 EBI Solutions Programming Exercise
 
@@ -175,3 +177,13 @@ The focus of the exercise is on
 
 _The puzzle can be solved but poorly coding an application capable of generating the correct answer will not be seen as “better” than a well coded application that generates the wrong answer._
 
+
+## What next...
+
+I would love to introduce the solution logic from logic.js in the form of an additional message window that can be opened up within the vue app. 
+
+This could mimic a social messaging chat window giving the user an 'ask a friend' option.
+
+The messaging within this chat window could be powered by an IBM watson assistant service. The conversation tree being designed to handle questions from the user and to provide instruction for solving the problem based on the logic draughted out in logic.js.
+
+The user could then use the additional chat window to guide them through solving the problem.
