@@ -25,7 +25,7 @@ From a new terminal in the root folder of the project:
 cd ./space-station-comms
 npm install
 cp .env.dev .env
-npm run server
+npm run serve
 ```
 
 You can then navigate to the vue app from your browser:
