@@ -1,8 +1,39 @@
 # Space-Station-Puzzle
+
+EBI Solutions Programming Exercise
+
 *This branch contains an exploration of the idea for my own curiosity*
 _Disclaimer: all additional code in this branch is not submitted as part of the Programming Excersise but is instead included to show where a development of the ideas presented in the original excersise may have led_
 
-EBI Solutions Programming Exercise
+## Instructions
+
+### First we need to start up the 'Employee Data Api'
+
+From a terminal in the root folder of the project:
+
+```
+cd ./employee-data-api
+npm install
+npm run start
+```
+
+### Second we start the main vue app
+
+From a new terminal in the root folder of the project:
+
+```
+cd ./space-station-comms
+npm install
+cp .env.dev .env
+npm run server
+```
+
+You can then navigate to the vue app from your browser:
+
+[http://localhost:8080/]
+
+Enjoy :)
+
 
 ## First section
 
@@ -163,19 +194,6 @@ We've got a plan!
 I wrote some javascript to test the above approach.
 
 This has been included for reference as logic.js
-
-
-Part 2
-All code should be written in C# or Nodejs and does not need to be anything more than a console application but any application type is acceptable.
-
-Code should be submitted as a zip file of the working solution via Dropbox, Google Drive or such other online link, rather than in a Word document.
-
-The focus of the exercise is on
-
-[x] approach
-[ ] code structure
-
-_The puzzle can be solved but poorly coding an application capable of generating the correct answer will not be seen as “better” than a well coded application that generates the wrong answer._
 
 
 ## What next...
