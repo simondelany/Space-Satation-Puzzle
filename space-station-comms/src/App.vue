@@ -11,7 +11,7 @@
     </main>
     <footer>
       <p>
-        Remember
+        Remember:
         <span>{{ footer.msg }}</span>
       </p>
     </footer>
