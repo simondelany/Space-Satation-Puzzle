@@ -3,7 +3,7 @@
     <h3>Main Panel</h3>
     <div class="h-container h-60">
         <comms-console />
-        <control-panel />
+        <control-panel v-show="isReady"/>
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 import CommsConsole from '@/components/CommsConsole.vue'
 import ControlPanel from '@/components/ControlPanel.vue'
+import store from '@/store'
 
 @Component({
   components: {
@@ -21,6 +22,9 @@ import ControlPanel from '@/components/ControlPanel.vue'
   }
 })
 export default class MainPanel extends Vue {
+  get isReady (): boolean {
+    return store.getters.isReady()
+  }
 }
 
 </script>

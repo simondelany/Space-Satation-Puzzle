@@ -1,8 +1,15 @@
+interface CareerPosition {
+    title: string;
+}
+
 export interface Person {
     uuid: string,
     status: string,
-    name: string,
-    transferTime: string,
+    title: string,
+    firstName: string,
+    lastName: string,
+    transferTime: number,
     location: number,
-    position: number
+    position: CareerPosition,
+    selected?: boolean
 }

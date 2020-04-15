@@ -2,56 +2,56 @@
     "employees": [
         {
             "uuid": "d00f2fef-75e3-44a2-bdde-87acf04e6331",
-            "first-name": "-neil",
-            "last-name": "Fitzpatrick",
+            "firstName": "Neil",
+            "lastName": "Fitzpatrick",
             "title": "Mr.",
-            "postition": {
+            "position": {
                 "title": "Pilot"
             },
-            "transferTime": "1"
+            "transferTime": 1
         },
         {
             "uuid": "f7cd16aa-9866-4efe-ac70-b20c49167239",
-            "first-name": "Michael",
-            "last-name": "Lawson",
+            "firstName": "Michael",
+            "lastName": "Lawson",
             "title": "Mr.",
-            "postition": {
+            "position": {
                 "title": "Commander"
             },
-            "transferTime": "2"
+            "transferTime": 2
         },
         {
             "uuid": "64fa5ade-dd9c-4f8f-b6f6-6755817a9871",
-            "first-name": "Valentina",
-            "last-name": "Mitchel",
+            "firstName": "Valentina",
+            "lastName": "Mitchel",
             "title": "Ms.",
-            "postition": {
+            "position": {
                 "title": "Mission Specialist"
             },
-            "transferTime": "3"
+            "transferTime": 3
         },
         {
             "uuid": "4d43ea7f-03c0-49d6-adc9-0af7385d13d1",
-            "first-name": "Yuri",
-            "last-name": "Karimazov",
+            "firstName": "Yuri",
+            "lastName": "Karimazov",
             "title": "Mr",
-            "postition": {
+            "position": {
                 "title": "Flight Engineer"
             },
-            "transferTime": "5"
+            "transferTime": 5
         },
         {
             "uuid": "51af3c56-f136-4e70-9b8b-9b02c7f95876",
-            "first-name": "Edwin",
-            "last-name": "Marston",
+            "firstName": "Edwin",
+            "lastName": "Marston",
             "title": "Mr",
-            "postition": {
+            "position": {
                 "title": "Payload Specialist"
             },
-            "transferTime": "10"
+            "transferTime": 10
         }
     ],
-    "physical_assesments": [
+    "physicalAssesments": [
         {
             "uuid": "12acdaa7-fe56-4f77-a8b7-68acf5c558ae",
             "employee_uuid": "d00f2fef-75e3-44a2-bdde-87acf04e6331",

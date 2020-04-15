@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // for speed we will use JSON data instead of connecting to a db
-const source = require('./employee_data.json')
+const source = require('./employee_data.json.js')
 
     // define the employees endpoint
     router.get('/employees', (req, res, next) => {

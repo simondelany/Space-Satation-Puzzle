@@ -1,8 +1,12 @@
 <template>
-  <div class="h-container">
-    <p class="person-name">Name:{{ data.name }}</p>
-    <p class="person-transfer-time">Transfer time:<span>{{ data.transferTime }}</span></p>
-  </div>
+    <div class="crew">
+        <div class="crew__block"
+            v-bind:class="{selected: data.selected}"
+            draggable="true"
+            @click="handleClick">
+            <p class="person-name">{{ data.firstName }}</p>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -13,8 +17,12 @@ import { Person } from '@/store/Person.ts'
 export default class Crew extends Vue {
   @Prop() private data!: Person
 
-  private type () {
-    return (this.data.status) ? 'Active' : 'Deceased'
+  private handleClick () {
+    if (this.data.selected) {
+      this.$emit('deselectPerson', this.data)
+    } else {
+      this.$emit('selectPerson', this.data)
+    }
   }
 }
 </script>
@@ -22,14 +30,18 @@ export default class Crew extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "@/styles/definitions/_variables.scss";
-  .transfer {
-    padding-left: $grid-spacer;
-    padding-right: $grid-spacer;
+  .crew {
+    padding: 0.5vmin;
 
-    .console {
-        height: 30%;
-        margin-top: 60%;
-        padding: 0;
+    &__block {
+      background-color: rgb(36, 33, 65);
+      height: 100%;
+      padding: 0;
+      margin-top: auto;
+    }
+
+    &__block.selected {
+      background-color: blue;
     }
   }
 

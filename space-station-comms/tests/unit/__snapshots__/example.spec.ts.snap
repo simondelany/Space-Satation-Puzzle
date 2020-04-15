@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crew.vue renders props.data when passed 1`] = `
+<div class="crew">
+  <div draggable="true" class="crew__block">
+    <p class="person-name">Neil</p>
+  </div>
+</div>
+`;

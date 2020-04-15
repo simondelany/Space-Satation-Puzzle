@@ -53,7 +53,6 @@ body {
 
         .console {
             display: grid;
-            grid-template-rows: 1fr 2em;
             background-color: $background-darker;
             border-width: medium;
             border-color: #616161c4;
@@ -91,6 +90,10 @@ body {
                     float: right;
                 }
             }
+        }
+
+        .comms-console .console  {
+            grid-template-rows: 1fr 2em;
         }
     }
 

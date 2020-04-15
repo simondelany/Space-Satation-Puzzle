@@ -2,14 +2,26 @@
   <div class="control-panel">
     <p>{{ data.title }}</p>
     <div class="h-container p-0">
-      <station-module :name="'Alpha'"
+      <station-module ref="moduleAlpha"
+      :name="'Alpha'"
         :status="'DAMAGED'"
-        :crew="crewInA"/>
-      <transfer :status="data.transferStatus"
-        :crew="crewInTransit"/>
-      <station-module :name="'Bravo'"
+        :transferCapacity="2"
+        :hasSuits="suitPosition === 0"
+        :crew="crewInA"
+        :msgBus="data.msgBus"/>
+      <transfer :status="suitPosition"
+        :crew="crewInTransit"
+        :selectedCrew="selectedCrew"
+        :selected="selectedCrew"
+        :transferCapacity="(suitPosition) ?  1 : 2"
+        v-on:startTransfer="startTransfer"/>
+      <station-module ref="moduleBravo"
+        :name="'Bravo'"
         :status="'OK'"
-        :crew="crewInB"/>
+        :hasSuits="suitPosition === 1"
+        :transferCapacity="1"
+        :crew="crewInB"
+        :msgBus="data.msgBus"/>
     </div>
   </div>
 </template>
@@ -29,7 +41,8 @@ import { Person } from '@/store/Person'
 })
 export default class ControlPanel extends Vue {
   private data = {
-    title: 'Space Station Control Panel'
+    title: 'Space Station Control Panel',
+    msgBus: new Vue() // we use a vue instance as a message bus to the station modules
   }
 
   get transitStatus (): number {
@@ -38,18 +51,29 @@ export default class ControlPanel extends Vue {
 
   get crewInA (): Person[] {
     const crew = store.getters.getCrewA()
-    console.dir(crew)
     return crew
   }
 
   get crewInB (): Person[] {
     const crew = store.getters.getCrewB()
-    console.dir(crew)
     return crew
   }
 
   get crewInTransit (): Person[] {
     return store.getters.getCrewInTransit()
+  }
+
+  get selectedCrew (): Person[] {
+    return store.getters.getSelectedCrew()
+  }
+
+  get suitPosition (): number {
+    return store.state.suitPosition
+  }
+
+  private startTransfer () {
+    store.dispatch('startTransfer')
+    this.data.msgBus.$emit('clearLocalSelection')
   }
 }
 </script>
