@@ -1,20 +1,18 @@
 # space-station-comms
 
-## Project setup
+
+## App setup
+This vue app relies on a connection to an API. First you should ensure this API is running locally before starting. Please check the README.md in '../employee-data-api' for instructions.
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
+cp .env.dev .env
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
 ### Run your unit tests
 ```
 npm run test:unit
